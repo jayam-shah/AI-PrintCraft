@@ -1,0 +1,341 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --background: hsl(0 0% 100%);
+  --foreground: hsl(210 25% 7.8431%);
+  --card: hsl(180 6.6667% 97.0588%);
+  --card-foreground: hsl(210 25% 7.8431%);
+  --popover: hsl(0 0% 100%);
+  --popover-foreground: hsl(210 25% 7.8431%);
+  --primary: hsl(249 100% 65.5%);
+  --primary-foreground: hsl(0 0% 100%);
+  --secondary: hsl(167 85% 41%);
+  --secondary-foreground: hsl(0 0% 100%);
+  --muted: hsl(240 1.9608% 90%);
+  --muted-foreground: hsl(210 25% 7.8431%);
+  --accent: hsl(41 95% 48%);
+  --accent-foreground: hsl(210 25% 7.8431%);
+  --destructive: hsl(356.3033 90.5579% 54.3137%);
+  --destructive-foreground: hsl(0 0% 100%);
+  --border: hsl(201.4286 30.4348% 90.9804%);
+  --input: hsl(200 23.0769% 97.4510%);
+  --ring: hsl(249 100% 65.5%);
+  --chart-1: hsl(249 100% 65.5%);
+  --chart-2: hsl(167 85% 41%);
+  --chart-3: hsl(41 95% 48%);
+  --chart-4: hsl(147.1429 78.5047% 41.9608%);
+  --chart-5: hsl(341.4894 75.2000% 50.9804%);
+  --sidebar: hsl(180 6.6667% 97.0588%);
+  --sidebar-foreground: hsl(210 25% 7.8431%);
+  --sidebar-primary: hsl(249 100% 65.5%);
+  --sidebar-primary-foreground: hsl(0 0% 100%);
+  --sidebar-accent: hsl(211.5789 51.3514% 92.7451%);
+  --sidebar-accent-foreground: hsl(249 100% 65.5%);
+  --sidebar-border: hsl(205.0000 25.0000% 90.5882%);
+  --sidebar-ring: hsl(249 100% 65.5%);
+  --font-sans: 'Inter', sans-serif;
+  --font-serif: Georgia, serif;
+  --font-mono: Menlo, monospace;
+  --radius: 1.3rem;
+  --shadow-2xs: 0px 2px 0px 0px hsl(249 100% 65.5% / 0.00);
+  --shadow-xs: 0px 2px 0px 0px hsl(249 100% 65.5% / 0.00);
+  --shadow-sm: 0px 2px 0px 0px hsl(249 100% 65.5% / 0.00), 0px 1px 2px -1px hsl(249 100% 65.5% / 0.00);
+  --shadow: 0px 2px 0px 0px hsl(249 100% 65.5% / 0.00), 0px 1px 2px -1px hsl(249 100% 65.5% / 0.00);
+  --shadow-md: 0px 2px 0px 0px hsl(249 100% 65.5% / 0.00), 0px 2px 4px -1px hsl(249 100% 65.5% / 0.00);
+  --shadow-lg: 0px 2px 0px 0px hsl(249 100% 65.5% / 0.00), 0px 4px 6px -1px hsl(249 100% 65.5% / 0.00);
+  --shadow-xl: 0px 2px 0px 0px hsl(249 100% 65.5% / 0.00), 0px 8px 10px -1px hsl(249 100% 65.5% / 0.00);
+  --shadow-2xl: 0px 2px 0px 0px hsl(249 100% 65.5% / 0.00);
+  --tracking-normal: 0em;
+  --spacing: 0.25rem;
+  
+  /* PrintCraft specific colors */
+  --printcraft-primary: hsl(249 100% 65.5%);
+  --printcraft-secondary: hsl(167 85% 41%);
+  --printcraft-accent: hsl(41 95% 48%);
+  --printcraft-gray-50: hsl(220 13% 98%);
+  --printcraft-gray-900: hsl(220 26% 14%);
+  --printcraft-gray-600: hsl(220 9% 46%);
+}
+
+.dark {
+  --background: hsl(0 0% 0%);
+  --foreground: hsl(200 6.6667% 91.1765%);
+  --card: hsl(228 9.8039% 10%);
+  --card-foreground: hsl(0 0% 85.0980%);
+  --popover: hsl(0 0% 0%);
+  --popover-foreground: hsl(200 6.6667% 91.1765%);
+  --primary: hsl(249 100% 65.5%);
+  --primary-foreground: hsl(0 0% 100%);
+  --secondary: hsl(167 85% 41%);
+  --secondary-foreground: hsl(0 0% 100%);
+  --muted: hsl(0 0% 9.4118%);
+  --muted-foreground: hsl(210 3.3898% 46.2745%);
+  --accent: hsl(41 95% 48%);
+  --accent-foreground: hsl(210 25% 7.8431%);
+  --destructive: hsl(356.3033 90.5579% 54.3137%);
+  --destructive-foreground: hsl(0 0% 100%);
+  --border: hsl(210 5.2632% 14.9020%);
+  --input: hsl(207.6923 27.6596% 18.4314%);
+  --ring: hsl(249 100% 65.5%);
+  --chart-1: hsl(249 100% 65.5%);
+  --chart-2: hsl(167 85% 41%);
+  --chart-3: hsl(41 95% 48%);
+  --chart-4: hsl(147.1429 78.5047% 41.9608%);
+  --chart-5: hsl(341.4894 75.2000% 50.9804%);
+  --sidebar: hsl(228 9.8039% 10%);
+  --sidebar-foreground: hsl(0 0% 85.0980%);
+  --sidebar-primary: hsl(249 100% 65.5%);
+  --sidebar-primary-foreground: hsl(0 0% 100%);
+  --sidebar-accent: hsl(205.7143 70% 7.8431%);
+  --sidebar-accent-foreground: hsl(249 100% 65.5%);
+  --sidebar-border: hsl(205.7143 15.7895% 26.0784%);
+  --sidebar-ring: hsl(249 100% 65.5%);
+  --font-sans: 'Inter', sans-serif;
+  --font-serif: Georgia, serif;
+  --font-mono: Menlo, monospace;
+  --radius: 1.3rem;
+  --shadow-2xs: 0px 2px 0px 0px hsl(249 100% 65.5% / 0.00);
+  --shadow-xs: 0px 2px 0px 0px hsl(249 100% 65.5% / 0.00);
+  --shadow-sm: 0px 2px 0px 0px hsl(249 100% 65.5% / 0.00), 0px 1px 2px -1px hsl(249 100% 65.5% / 0.00);
+  --shadow: 0px 2px 0px 0px hsl(249 100% 65.5% / 0.00), 0px 1px 2px -1px hsl(249 100% 65.5% / 0.00);
+  --shadow-md: 0px 2px 0px 0px hsl(249 100% 65.5% / 0.00), 0px 2px 4px -1px hsl(249 100% 65.5% / 0.00);
+  --shadow-lg: 0px 2px 0px 0px hsl(249 100% 65.5% / 0.00), 0px 4px 6px -1px hsl(249 100% 65.5% / 0.00);
+  --shadow-xl: 0px 2px 0px 0px hsl(249 100% 65.5% / 0.00), 0px 8px 10px -1px hsl(249 100% 65.5% / 0.00);
+  --shadow-2xl: 0px 2px 0px 0px hsl(249 100% 65.5% / 0.00);
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply font-sans antialiased bg-background text-foreground;
+  }
+}
+
+/* PrintCraft specific styles */
+.bg-gradient-primary {
+  background: linear-gradient(135deg, var(--printcraft-primary), #4338CA);
+}
+
+.bg-gradient-secondary {
+  background: linear-gradient(135deg, var(--printcraft-secondary), #059669);
+}
+
+.text-printcraft-primary {
+  color: var(--printcraft-primary);
+}
+
+.text-printcraft-secondary {
+  color: var(--printcraft-secondary);
+}
+
+.text-printcraft-accent {
+  color: var(--printcraft-accent);
+}
+
+.bg-printcraft-gray-50 {
+  background-color: var(--printcraft-gray-50);
+}
+
+.text-printcraft-gray-900 {
+  color: var(--printcraft-gray-900);
+}
+
+.text-printcraft-gray-600 {
+  color: var(--printcraft-gray-600);
+}
+
+/* Innovative Animations and Effects */
+@keyframes float {
+  0%, 100% { transform: translateY(0px) rotate(0deg); }
+  50% { transform: translateY(-10px) rotate(1deg); }
+}
+
+@keyframes paperplane {
+  0% { 
+    transform: scale(1) rotate(0deg);
+    opacity: 1;
+  }
+  25% { 
+    transform: scale(0.8) rotate(5deg);
+    opacity: 0.8;
+  }
+  50% { 
+    transform: scale(0.6) rotate(15deg) translateX(50px) translateY(-30px);
+    opacity: 0.6;
+  }
+  75% { 
+    transform: scale(0.4) rotate(45deg) translateX(150px) translateY(-80px);
+    opacity: 0.3;
+  }
+  100% { 
+    transform: scale(0.1) rotate(90deg) translateX(300px) translateY(-150px);
+    opacity: 0;
+  }
+}
+
+@keyframes glowPulse {
+  0%, 100% { box-shadow: 0 0 20px rgba(99, 102, 241, 0.3); }
+  50% { box-shadow: 0 0 30px rgba(99, 102, 241, 0.6); }
+}
+
+@keyframes slideInUp {
+  from {
+    opacity: 0;
+    transform: translateY(50px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes bounceIn {
+  0% {
+    opacity: 0;
+    transform: scale(0.3) rotate(-10deg);
+  }
+  50% {
+    opacity: 1;
+    transform: scale(1.05) rotate(2deg);
+  }
+  70% {
+    transform: scale(0.95) rotate(-1deg);
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1) rotate(0deg);
+  }
+}
+
+@keyframes shimmer {
+  0% { background-position: -200% 0; }
+  100% { background-position: 200% 0; }
+}
+
+@keyframes wiggle {
+  0%, 7% { transform: rotateZ(0); }
+  15% { transform: rotateZ(-15deg); }
+  20% { transform: rotateZ(10deg); }
+  25% { transform: rotateZ(-10deg); }
+  30% { transform: rotateZ(6deg); }
+  35% { transform: rotateZ(-4deg); }
+  40%, 100% { transform: rotateZ(0); }
+}
+
+/* Animation Classes */
+.animate-float {
+  animation: float 3s ease-in-out infinite;
+}
+
+.animate-paperplane {
+  animation: paperplane 2s cubic-bezier(0.25, 0.46, 0.45, 0.94) forwards;
+}
+
+.animate-glow {
+  animation: glowPulse 2s ease-in-out infinite;
+}
+
+.animate-slide-in-up {
+  animation: slideInUp 0.6s ease-out;
+}
+
+.animate-bounce-in {
+  animation: bounceIn 0.8s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+}
+
+.animate-wiggle {
+  animation: wiggle 1s ease-in-out;
+}
+
+/* Interactive Card Effects */
+.card-hover-effect {
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  transform-origin: center;
+}
+
+.card-hover-effect:hover {
+  transform: translateY(-8px) scale(1.02);
+  box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25);
+}
+
+.card-tilt {
+  transition: transform 0.3s ease;
+}
+
+.card-tilt:hover {
+  transform: perspective(1000px) rotateX(5deg) rotateY(-5deg) scale(1.02);
+}
+
+/* Gradient Animation */
+.gradient-animate {
+  background: linear-gradient(45deg, #6366F1, #8B5CF6, #EC4899, #F59E0B);
+  background-size: 400% 400%;
+  animation: gradientShift 4s ease infinite;
+}
+
+@keyframes gradientShift {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+/* Shimmer Effect */
+.shimmer-effect {
+  background: linear-gradient(90deg, transparent, rgba(255,255,255,0.4), transparent);
+  background-size: 200% 100%;
+  animation: shimmer 2s infinite;
+}
+
+/* Paper Airplane Specific Styles */
+.paper-airplane-card {
+  cursor: pointer;
+  transition: all 0.3s ease;
+  position: relative;
+  overflow: hidden;
+}
+
+.paper-airplane-card::before {
+  content: '✈️';
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  font-size: 20px;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.paper-airplane-card:hover::before {
+  opacity: 1;
+}
+
+.paper-airplane-card.launching {
+  z-index: 1000;
+  position: relative;
+}
+
+/* Stagger Animation Delays */
+.stagger-1 { animation-delay: 0.1s; }
+.stagger-2 { animation-delay: 0.2s; }
+.stagger-3 { animation-delay: 0.3s; }
+.stagger-4 { animation-delay: 0.4s; }
+.stagger-5 { animation-delay: 0.5s; }
+.stagger-6 { animation-delay: 0.6s; }
+
+/* Modern Glass Effect */
+.glass-effect {
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.glass-dark {
+  background: rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
